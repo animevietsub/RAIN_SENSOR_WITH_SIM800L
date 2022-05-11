@@ -1,7 +1,7 @@
 /**
  ******************************************************************************
  * @file           : animation.h
- * @brief          : RAIN_SENSOR_WITH_SIM800L
+ * @brief          : WLC_LCD176X220_PID
  ******************************************************************************
  * @attention
  *
@@ -38,17 +38,13 @@
 
 #include "ili9225.h"
 
-void setLSV(TFT_t *dev, FontxFile *fx, uint16_t value);
-void setRSV(TFT_t *dev, FontxFile *fx, uint16_t value);
-void setLST(TFT_t *dev, FontxFile *fx, uint16_t value);
-void setRST(TFT_t *dev, FontxFile *fx, uint16_t value);
+void setT_REF(TFT_t *dev, FontxFile *fx, uint16_t value);
+void setT_ACTIVE(TFT_t *dev, FontxFile *fx, uint16_t value);
+void setT_STORE(TFT_t *dev, FontxFile *fx, uint16_t value);
 void drawImage(TFT_t *dev, char *file, uint16_t offsetX, uint16_t offsetY, uint16_t width, uint16_t height);
-void drawRainy(TFT_t *dev, uint16_t offsetX, uint16_t offsetY);
-void drawSunny(TFT_t *dev, uint16_t offsetX, uint16_t offsetY);
-void drawSunshower(TFT_t *dev, uint16_t offsetX, uint16_t offsetY);
-void setWeatherText(TFT_t *dev, FontxFile *fx, char * text);
-void setStatusText(TFT_t *dev, FontxFile *fx, char * text);
-void setPhoneText(TFT_t *dev, FontxFile *fx, char * text);
-void setAutoManualText(TFT_t *dev, FontxFile *fx, char *text);
+void drawMotorOff(TFT_t *dev, uint16_t offsetX, uint16_t offsetY);
+void drawMotorOn(TFT_t *dev, uint16_t offsetX, uint16_t offsetY);
+void drawValveOn(TFT_t *dev, uint16_t offsetX, uint16_t offsetY);
+void drawValveOff(TFT_t *dev, uint16_t offsetX, uint16_t offsetY);
 
 #endif

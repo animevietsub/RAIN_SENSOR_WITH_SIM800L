@@ -5,5 +5,5 @@
 cmake_minimum_required(VERSION 3.5)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(RCC_LCD176X220_NRF24L01)
+project(SHS_LCD176X220)
 spiffs_create_partition_image(storage font FLASH_IN_PROJECT)

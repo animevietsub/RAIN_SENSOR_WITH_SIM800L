@@ -1,7 +1,7 @@
 /**
  ******************************************************************************
  * @file           : main.h
- * @brief          : RAIN_SENSOR_WITH_SIM800L
+ * @brief          : SHS_LCD176X220
  ******************************************************************************
  * @attention
  *
@@ -19,26 +19,8 @@
 #ifndef __MAIN_H__
 #define __MAIN_H__
 
-typedef enum
-{
-    WEATHER_SUNNY,
-    WEATHER_RAINY,
-    WEATHER_SUNSHOWER,
-} weather_status_t;
-
-typedef enum
-{
-    DUMMY = -1,
-    MENU_IDLE = 0,
-    MENU_MANUAL_AUTO,
-    MENU_LST,
-    MENU_RST,
-} menu_list_t;
-
-typedef enum
-{
-    ACTION_DRYING = 0,
-    ACTION_STORING,
-} my_action_t;
+#define TEMP_P1_COEFF -0.000012
+#define TEMP_P2_COEFF 0.06605
+#define TEMP_P3_COEFF 7.785
 
 #endif
