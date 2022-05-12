@@ -46,6 +46,9 @@
         "sr04m_lib.h": "c",
         "iterator": "c",
         "nvs_flash.h": "c",
-        "i2s_lcd_driver.h": "c"
+        "i2s_lcd_driver.h": "c",
+        "gpio.h": "c",
+        "relay_motor_library.h": "c",
+        "adc_mux_4067.h": "c"
     }
 }

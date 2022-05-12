@@ -18,6 +18,23 @@
  */
 #include "animation.h"
 
+uint8_t old_percentage_level = 0;
+
+void setWaterLevel(TFT_t *dev, uint8_t percentage)
+{
+    uint8_t x1 = old_percentage_level * 67 / 100;
+    uint8_t x2 = percentage * 67 / 100;
+    if (x2 > x1)
+    {
+        lcdDrawFillRect(dev, 56 + x1, 157, 57 + x2, 212, 0x057D);
+    }
+    else if (x2 < x1)
+    {
+        lcdDrawFillRect(dev, 56 + x2, 157, 57 + x1, 212, 0xDEDB);
+    }
+    old_percentage_level = percentage;
+}
+
 void setT_REF(TFT_t *dev, FontxFile *fx, uint16_t value)
 {
     uint8_t buffer[FontxGlyphBufSize];
@@ -97,14 +114,14 @@ void drawMotorOn(TFT_t *dev, uint16_t offsetX, uint16_t offsetY)
     drawImage(dev, file, offsetX, offsetY, 32, 46);
 }
 
-void drawValveOn(TFT_t *dev, uint16_t offsetX, uint16_t offsetY)
+void drawValveOff(TFT_t *dev, uint16_t offsetX, uint16_t offsetY)
 {
     char file[32];
     strcpy(file, "/spiffs/valve_off.jpg");
     drawImage(dev, file, offsetX, offsetY, 32, 42);
 }
 
-void drawValveOff(TFT_t *dev, uint16_t offsetX, uint16_t offsetY)
+void drawValveOn(TFT_t *dev, uint16_t offsetX, uint16_t offsetY)
 {
     char file[32];
     strcpy(file, "/spiffs/valve_on.jpg");

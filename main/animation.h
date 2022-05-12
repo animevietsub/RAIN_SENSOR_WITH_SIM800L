@@ -38,6 +38,7 @@
 
 #include "ili9225.h"
 
+void setWaterLevel(TFT_t *dev, uint8_t percentage);
 void setT_REF(TFT_t *dev, FontxFile *fx, uint16_t value);
 void setT_ACTIVE(TFT_t *dev, FontxFile *fx, uint16_t value);
 void setT_STORE(TFT_t *dev, FontxFile *fx, uint16_t value);

@@ -19,8 +19,6 @@
 #ifndef __PORT_H__
 #define __PORT_H__
 
-#define SWITCH_H_PIN 16
-#define SWITCH_L_PIN 17
 #define SWITCH_UP_PIN 34
 #define SWITCH_DOWN_PIN 33
 #define SWITCH_LEFT_PIN 35
